@@ -365,7 +365,8 @@ if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
   if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
   then
-    paste newpages.txt newpages-corrected.txt > newpages-patch.txt
+    sdiff -s newpages.txt newpages-corrected.txt > newpages-patch.txt
+    sed -i "s:|::g" newpages-patch.txt #removes pipe character
     movepages newpages-patch.txt
     md5sum newpages-corrected.txt > MD5SUM
   fi
