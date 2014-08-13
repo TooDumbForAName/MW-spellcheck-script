@@ -347,10 +347,17 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 
 addbrackets newpages.txt newpages-corrected.txt
 
-if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
+OLDMDSUM=$(cat MD5SUM)
+NEWMDSUM=$(md5sum newpages-corrected.txt)
+
+if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
-  paste newpages.txt newpages-corrected.txt > newpages-patch.txt
-  movepages newpages-patch.txt
+  if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
+  then
+    paste newpages.txt newpages-corrected.txt > newpages-patch.txt
+    movepages newpages-patch.txt
+    md5sum newpages-corrected.txt > MD5SUM
+  fi
 fi
 
 #Cleanup
