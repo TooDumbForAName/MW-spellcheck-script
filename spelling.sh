@@ -349,6 +349,9 @@ sed -i "s:Monster Hunter Tri:Monster Hunter Tri:I" newpages-corrected.txt
 
 sed -i "s:runescape:RuneScape:I" newpages-corrected.txt
 
+#Spellcheck "Woozworld"
+
+sed -i "s:woozworld:Woozworld:I" newpages-corrected.txt
 
 #Spellcheck "happened"
 
