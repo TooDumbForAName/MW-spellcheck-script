@@ -55,8 +55,12 @@ sed -i "s:\bIndia\b:India:I" newpages-corrected.txt
 
 #Spellcheck "Canada"
 
-
 sed -i "s:\bCanada:Canada:I" newpages-corrected.txt
+
+#Spellcheck "Costa Rica"
+
+sed -i "s:\bCostaRica:Costa Rica:I" newpages-corrected.txt
+sed -i "s:\bCosta Rica: Costa Rica:I" newpages-corrected.txt
 
 #Fix possessive "India's"
 
