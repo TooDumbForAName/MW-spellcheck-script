@@ -57,6 +57,17 @@ sed -i "s:\. When:. When:I" newpages-corrected.txt #Fixes start of new sentence
 #Spellcheck "California"
 
 sed -i "s:california:California:I" newpages-corrected.txt
+sed -i "s:Californias:California's:I" newpages-corrected.txt
+
+#Spellcheck "Montana"
+
+sed -i "s:montana:Montana:I" newpages-corrected.txt
+sed -i "s:Montanas:Montana's:I" newpages-corrected.txt
+
+#Spellcheck "Wyoming"
+
+sed -i "s:Wyoming:Wyoming:I" newpages-corrected.txt
+sed -i "s:Wyomings:Wyoming's:I" newpages-corrected.txt
 
 #Spellcheck "Canada"
 
