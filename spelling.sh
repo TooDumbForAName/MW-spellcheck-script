@@ -28,16 +28,16 @@ cp newpages.txt newpages-corrected.txt
 #Spellcheck lowercase single "I"
 
 
-sed -I "s:\bi\b:I:g" newpages-corrected.txt
+sed -i "s:\bi\b:I:g" newpages-corrected.txt
 
 #Spellcheck "iPod"
 
 
-sed -I "s:ipod:iPod:I" newpages-corrected.txt
+sed -i "s:ipod:iPod:I" newpages-corrected.txt
 
 #Spellcheck "iPhone"
 
-sed -I "s:iphone:iPhone:I" newpages-corrected.txt
+sed -i "s:iphone:iPhone:I" newpages-corrected.txt
 
 #Spellcheck misspelled word "when"
 
@@ -338,7 +338,7 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 
 addbrackets newpages.txt newpages-corrected.txt
 
-if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected)" ]; #sums are different, so it's worth running
+if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
 then
   paste newpages.txt newpages-corrected.txt > newpages-patch.txt
   movepages newpages-patch.txt
