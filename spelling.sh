@@ -353,6 +353,10 @@ sed -i "s:runescape:RuneScape:I" newpages-corrected.txt
 
 sed -i "s:woozworld:Woozworld:I" newpages-corrected.txt
 
+#Spellcheck "Wikianswers"
+
+sed -i "s:wikianswers:Wikianswers:I" newpages-corrected.txt
+
 #Spellcheck "happened"
 
 sed -i "s:happend:happened:I" newpages-corrected.txt
@@ -366,6 +370,8 @@ NEWMDSUM=$(md5sum newpages-corrected.txt)
 
 if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
+  printf "%s" "$OLDMDSUM"
+  printf "%s" "$NEWMDSUM"
   if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
   then
     sdiff -s newpages.txt newpages-corrected.txt > newpages-patch.txt
