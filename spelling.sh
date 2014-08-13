@@ -337,8 +337,12 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 #Final fixes and merge
 
 addbrackets newpages.txt newpages-corrected.txt
-paste newpages.txt newpages-corrected.txt > newpages-patch.txt
-movepages newpages-patch.txt
+
+if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected)" ]; #sums are different, so it's worth running
+then
+  paste newpages.txt newpages-corrected.txt > newpages-patch.txt
+  movepages newpages-patch.txt
+fi
 
 #Cleanup
 rm ./*.txt
