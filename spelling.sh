@@ -22,20 +22,13 @@ function addbrackets {
 
 python $PYWIKIPEDIADIR/pagegenerators.py -new:50 -pt:$GBT -ns:0 > newpages.txt
 python $PYWIKIPEDIADIR/pagegenerators.py -recentchanges:50 -pt:$GBT -ns:0 >> newpages.txt 
-
-sort newpages.txt > newpages-sorted.txt
-rm newpages.txt
-mv newpages-sorted.txt newpages.txt
 cp newpages.txt newpages-corrected.txt
 
 
 #Spellcheck lowercase single "I"
 
+
 sed -i "s:\bi\b:I:g" newpages-corrected.txt
-
-#Replace single 'r' with 'are'
-
-sed -i "s: r : are :g" newpages-corrected.txt
 
 #Spellcheck "Don't"
 
@@ -316,9 +309,6 @@ sed -i "s:\baqw\b:AdventureQuest Worlds:I" newpages-corrected.txt
 sed -i "s:adventure quest worlds:AdventureQuest Worlds:I" newpages-corrected.txt
 sed -i "s:AdventureQuest Worlds:AdventureQuest Worlds:I" newpages-corrected.txt
 
-#Spellcheck "Woozworld"
-
-sed -i "s:Woozworld:Woozworld:I" newpages-corrected.txt
 
 #Spellcheck "Region"
 
@@ -368,23 +358,16 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 
 addbrackets newpages.txt newpages-corrected.txt
 
-sort newpages-corrected.txt > newpages-sorted.txt
-rm newpages-corrected.txt
-mv newpages-sorted.txt newpages-corrected.txt
-
-
 OLDMDSUM=$(cat MD5SUM)
-NEWMDSUM=$(md5sum newpages-patch.txt)
+NEWMDSUM=$(md5sum newpages-corrected.txt)
 
 if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
   if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
   then
-    comm -23 newpages.txt newpages-corrected.txt > set1.txt
-    comm -13 newpages.txt newpages-corrected.txt > set2.txt
-    paste set1.txt set2.txt > newpages-patch.txt
+    paste newpages.txt newpages-corrected.txt > newpages-patch.txt
     movepages newpages-patch.txt
-    md5sum newpages-patch.txt > MD5SUM
+    md5sum newpages-corrected.txt > MD5SUM
   fi
 fi
 
