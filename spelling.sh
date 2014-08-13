@@ -365,6 +365,10 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 
 addbrackets newpages.txt newpages-corrected.txt
 
+sort newpages-corrected.txt > newpages-sorted.txt
+rm newpages-corrected.txt
+mv newpages-sorted.txt newpages-corrected.txt
+
 
 OLDMDSUM=$(cat MD5SUM)
 NEWMDSUM=$(md5sum newpages-patch.txt)
