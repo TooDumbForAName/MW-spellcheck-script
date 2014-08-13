@@ -316,6 +316,9 @@ sed -i "s:\baqw\b:AdventureQuest Worlds:I" newpages-corrected.txt
 sed -i "s:adventure quest worlds:AdventureQuest Worlds:I" newpages-corrected.txt
 sed -i "s:AdventureQuest Worlds:AdventureQuest Worlds:I" newpages-corrected.txt
 
+#Spellcheck "Woozworld"
+
+sed -i "s:Woozworld:Woozworld:I" newpages-corrected.txt
 
 #Spellcheck "Region"
 
