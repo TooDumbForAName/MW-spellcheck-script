@@ -30,8 +30,17 @@ cp newpages.txt newpages-corrected.txt
 
 sed -i "s:\bi\b:I:g" newpages-corrected.txt
 
-#Spellcheck "iPod"
+#Spellcheck "Don't"
 
+sed -i "s:\bdont\b:don't:g" newpages-corrected.txt
+sed -i "s:\bDont\b:Don't:g" newpages-corrected.txt
+
+#Spellcheck "Won't"
+
+sed -i "s:\bwont\b:won't:g" newpages-corrected.txt
+sed -i "s:\bWont\b:Won't:g" newpages-corrected.txt 
+
+#Spellcheck "iPod"
 
 sed -i "s:ipod:iPod:I" newpages-corrected.txt
 
