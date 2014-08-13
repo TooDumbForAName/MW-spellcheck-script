@@ -9,14 +9,14 @@ PYWIKIPEDIADIR="../"
 BOTNAME="SpellBot"
 
 function movepages {
-  python  $PYWIKIPEDIADIR/movepages.py -pairs:$1 -pt:$GBT -skipredirects -summary:"[[User:$BOTNAME|$BOTNAME]] - correcting suspected spelling errors. Report any problems [[User talk:$BOTNAME|here]]"
+  python  $PYWIKIPEDIADIR/movepages.py -pairs:"$1" -pt:"$GBT" -skipredirects -summary:"[[User:$BOTNAME|$BOTNAME]] - correcting suspected spelling errors. Report any problems [[User talk:$BOTNAME|here]]"
 }
 
 function addbrackets {
-  sed -i 's:^:\[\[:g' $1
-  sed -i 's:^:\[\[:g' $2
-  sed -i 's:$:\]\]:g' $1
-  sed -i 's:$:\]\]:g' $2
+  sed -i "s:^:\[\[:g" $1
+  sed -i "s:^:\[\[:g" $2
+  sed -i "s:$:\]\]:g" $1
+  sed -i "s:$:\]\]:g" $2
 }
 #Fetch new pages.
 
@@ -49,10 +49,6 @@ sed -i "s:\. When:. When:I" newpages-corrected.txt #Fixes start of new sentence
 
 sed -i "s:california:California:I" newpages-corrected.txt
 
-#Spellcheck "India"
-
-sed -i "s:\bIndia\b:India:I" newpages-corrected.txt
-
 #Spellcheck "Canada"
 
 sed -i "s:\bCanada:Canada:I" newpages-corrected.txt
@@ -62,9 +58,15 @@ sed -i "s:\bCanada:Canada:I" newpages-corrected.txt
 sed -i "s:\bCostaRica:Costa Rica:I" newpages-corrected.txt
 sed -i "s:\bCosta Rica: Costa Rica:I" newpages-corrected.txt
 
-#Fix possessive "India's"
+#Spellcheck "India"
 
+sed -i "s:\bIndia\b:India:I" newpages-corrected.txt
 sed -i "s:\bIndias\b:India's:I" newpages-corrected.txt
+
+#Spellcheck "Pakistan"
+
+sed -i "s:\bPakistan:Pakistan:I" newpages-corrected.txt
+sed -i "s:\bPakistans:Pakistan's:I" newpages-corrected.txt
 
 #Spellcheck "French"
 
@@ -339,8 +341,8 @@ paste newpages.txt newpages-corrected.txt > newpages-patch.txt
 movepages newpages-patch.txt
 
 #Cleanup
-rm *.txt
+rm ./*.txt
 
-printf "`date`" > lastrun
+printf "%s" "$(date)" > lastrun
 
 
