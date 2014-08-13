@@ -373,7 +373,7 @@ if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
   if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
   then
-    comm -3 newpages.txt newpages-corrected.txt > newpages-patch.txt
+    comm -12 newpages.txt newpages-corrected.txt > newpages-patch.txt
     movepages newpages-patch.txt
     md5sum newpages-patch.txt > MD5SUM
   fi
