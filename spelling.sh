@@ -54,6 +54,21 @@ sed -i "s:\bwen\b:when:I" newpages-corrected.txt
 sed -i "s:\.When:. When:I" newpages-corrected.txt
 sed -i "s:\. When:. When:I" newpages-corrected.txt #Fixes start of new sentence
 
+#Spellcheck "Alabama"
+
+sed -i "s:Alabama:Alabama:I" newpages-corrected.txt
+sed -i "s:Alabamas:Alabama's:I" newpages-corrected.txt
+
+#Spellcheck "Alaska"
+
+sed -i "s:Alaska:Alaska:I" newpages-corrected.txt
+sed -i "s:Alaskas:Alaska's:I" newpages-corrected.txt
+
+#Spellcheck "Arizona"
+
+sed -i "s:Arizona:Arizona:I" newpages-corrected.txt
+sed -i "s:Arizonas:Arizona's:I" newpages-corrected.txt
+
 #Spellcheck "California"
 
 sed -i "s:california:California:I" newpages-corrected.txt
@@ -370,8 +385,6 @@ NEWMDSUM=$(md5sum newpages-corrected.txt)
 
 if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
-  printf "%s" "$OLDMDSUM"
-  printf "%s" "$NEWMDSUM"
   if [ "$(md5sum newpages.txt)" != "$(md5sum newpages-corrected.txt)" ]; #sums are different, so it's worth running
   then
     sdiff -s newpages.txt newpages-corrected.txt > newpages-patch.txt
