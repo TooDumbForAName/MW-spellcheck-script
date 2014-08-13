@@ -27,8 +27,11 @@ cp newpages.txt newpages-corrected.txt
 
 #Spellcheck lowercase single "I"
 
-
 sed -i "s:\bi\b:I:g" newpages-corrected.txt
+
+#Replace single 'r' with 'are'
+
+sed -i "s: r :are:g" newpages-corrected.txt
 
 #Spellcheck "Don't"
 
