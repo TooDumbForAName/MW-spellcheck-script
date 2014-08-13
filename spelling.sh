@@ -22,6 +22,10 @@ function addbrackets {
 
 python $PYWIKIPEDIADIR/pagegenerators.py -new:50 -pt:$GBT -ns:0 > newpages.txt
 python $PYWIKIPEDIADIR/pagegenerators.py -recentchanges:50 -pt:$GBT -ns:0 >> newpages.txt 
+
+sort newpages.txt > newpages-sorted.txt
+rm newpages.txt
+mv newpages-sorted.txt newpages.txt
 cp newpages.txt newpages-corrected.txt
 
 
@@ -360,6 +364,7 @@ sed -i "s:happend:happened:I" newpages-corrected.txt
 #Final fixes and merge
 
 addbrackets newpages.txt newpages-corrected.txt
+
 
 OLDMDSUM=$(cat MD5SUM)
 NEWMDSUM=$(md5sum newpages-patch.txt)
