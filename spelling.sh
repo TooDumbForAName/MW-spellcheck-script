@@ -92,6 +92,11 @@ sed -i "s:Colorados:Colorado's:I" "$CORRECTED"
 sed -i "s:montana:Montana:I" "$CORRECTED"
 sed -i "s:Montanas:Montana's:I" "$CORRECTED"
 
+#Spellcheck "Texas"
+
+sed -i "s:Texas:Texas:I" "$CORRECTED"
+sed -i "s:Texass:Texas's:I" "$CORRECTED"
+
 #Spellcheck "Wyoming"
 
 sed -i "s:Wyoming:Wyoming:I" "$CORRECTED"
@@ -141,6 +146,15 @@ sed -i "s:English:English:I" "$CORRECTED"
 sed -i "s:American Revolution:American Revolution:I" "$CORRECTED"
 sed -i "s:American:American:I" "$CORRECTED"
 
+#Spellcheck "Houston"
+
+sed -i "s:Houston:Houston:I" "$CORRECTED"
+sed -i "s:Houstons:Houston's:I" "$CORRECTED"
+
+#Spellcheck "Tucson"
+
+sed -i "s:Tucson:Tucson:I" "$CORRECTED"
+sed -i "s:Tucsons:Tucson's:I" "$CORRECTED"
 
 #Spellcheck "what"
 
