@@ -441,6 +441,13 @@ sed -i "s:helloKitty:Hello Kitty:I" $CORRECTED
 sed -i "s:Hot Wheels:Hot Wheels:I" $CORRECTED
 sed -i "s: HotWheels : Hot Wheels :I" $CORRECTED
 
+#Spellcheck "Beanie Babies"
+
+sed -i "s:Beanie Babies:Beanie Babies:I" "$CORRECTED"
+sed -i "s:BeanieBabies:Beanie Babies:I" "$CORRECTED"
+sed -i "s:Beanie Baby:Beanie Baby:I" "$CORRECTED"
+sed -i "s:BeanieBaby:Beanie Baby:I" "$CORRECTED"
+
 #Spellcheck "Webkinz"
 
 sed -i "s: Webkinz: Webkinz:I" $CORRECTED
