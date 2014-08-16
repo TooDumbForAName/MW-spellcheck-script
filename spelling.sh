@@ -2,14 +2,9 @@
 
 #This is the initial script for the automatic spelling fixes script. This automatically renames questions whenever possible to correct spelling and capitalization errors.
 
-#Global settings (for now)
+#Settings
 
-GBT=1
-PYWIKIPEDIADIR="../"
-BOTNAME="SpellBot"
-CORRECTED="/tmp/$PID/newpages-corrected.txt"
-NEWPAGES="/tmp/$PID/newpages.txt"
-PATCH="/tmp/$PID/patch.txt"
+. ./settings.sh
 
 function movepages {
   python  $PYWIKIPEDIADIR/movepages.py -pairs:"$1" -pt:"$GBT" -skipredirects -summary:"[[User:$BOTNAME|$BOTNAME]] - correcting suspected spelling errors. Report any problems [[User talk:$BOTNAME|here]]"

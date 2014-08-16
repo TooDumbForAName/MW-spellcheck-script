@@ -1,0 +1,10 @@
+#!/bin/bash
+
+#Settings
+
+GBT=1
+PYWIKIPEDIADIR="../"
+BOTNAME="MYBOTNAME"
+CORRECTED="/tmp/$PID/newpages-corrected.txt"
+NEWPAGES="/tmp/$PID/newpages.txt"
+PATCH="/tmp/$PID/patch.txt"
