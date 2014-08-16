@@ -29,6 +29,7 @@ cp "$NEWPAGES" "$CORRECTED"
 
 
 . ./basic/basic.sh
+. ./common/common.sh
 . ./Entertainment/Entertainment.sh
 . ./Government/Government.sh
 . ./Science/Science.sh
@@ -66,11 +67,6 @@ sed -i "s:cumputer:computer:I" "$CORRECTED"
 
 sed -i "s:\bvreb:verb:I" "$CORRECTED"
 
-#Spellcheck "Region"
-
-sed -i "s:R[eE][iI][gG][oO][nN]:Region:" "$CORRECTED"
-sed -i "s:r[eE][iI][gG][oO][nN]:region:" "$CORRECTED"
-
 #Spellcheck "PHP"
 
 sed -i "s:\bPHP\b:PHP:I" "$CORRECTED"
@@ -82,10 +78,6 @@ sed -i "s:Angkor What:Angkor Wat:I" "$CORRECTED"
 #Spellcheck "Wikianswers"
 
 sed -i "s:wikianswers:Wikianswers:I" "$CORRECTED"
-
-#Spellcheck "happened"
-
-sed -i "s:happend:happened:I" "$CORRECTED"
 
 #Final fixes and merge
 
