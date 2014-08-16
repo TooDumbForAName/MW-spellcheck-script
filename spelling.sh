@@ -30,6 +30,7 @@ cp "$NEWPAGES" "$CORRECTED"
 
 . ./basic/basic.sh
 . ./Entertainment/Entertainment.sh
+. ./Government/Government.sh
 
 #Spellcheck "iPod"
 
@@ -39,104 +40,13 @@ sed -i "s:ipod:iPod:I" "$CORRECTED"
 
 sed -i "s:iphone:iPhone:I" "$CORRECTED"
 
-#Spellcheck "Alabama"
-
-sed -i "s:Alabama:Alabama:I" "$CORRECTED"
-sed -i "s:Alabamas:Alabama's:I" "$CORRECTED"
-
-#Spellcheck "Alaska"
-
-sed -i "s:Alaska:Alaska:I" "$CORRECTED"
-sed -i "s:Alaskas:Alaska's:I" "$CORRECTED"
-
-#Spellcheck "Arizona"
-
-sed -i "s:Arizona:Arizona:I" "$CORRECTED"
-sed -i "s:Arizonas:Arizona's:I" "$CORRECTED"
-
-#Spellcheck "Arkansas"
-
-sed -i "s:Arkansas:Arkansas:I" "$CORRECTED"
-sed -i "s:Arkansass:Arkansas':I" "$CORRECTED"
-
-#Spellcheck "California"
-
-sed -i "s:california:California:I" "$CORRECTED"
-sed -i "s:Californias:California's:I" "$CORRECTED"
-
-#Spellcheck "Colorado"
-
-sed -i "s:Colorado:Colorado:I" "$CORRECTED"
-sed -i "s:Colorados:Colorado's:I" "$CORRECTED"
-
-#Spellcheck "Montana"
-
-sed -i "s:montana:Montana:I" "$CORRECTED"
-sed -i "s:Montanas:Montana's:I" "$CORRECTED"
-
-#Spellcheck "Texas"
-
-sed -i "s:Texas:Texas:I" "$CORRECTED"
-sed -i "s:Texass:Texas's:I" "$CORRECTED"
-
-#Spellcheck "Wyoming"
-
-sed -i "s:Wyoming:Wyoming:I" "$CORRECTED"
-sed -i "s:Wyomings:Wyoming's:I" "$CORRECTED"
-
-#Spellcheck "Canada"
-
-sed -i "s:\bCanada:Canada:I" "$CORRECTED"
-
-#Spellcheck "Costa Rica"
-
-sed -i "s:\bCostaRica:Costa Rica:I" "$CORRECTED"
-sed -i "s:\bCosta Rica: Costa Rica:I" "$CORRECTED"
-
-#Spellcheck "India"
-
-sed -i "s:\bIndia\b:India:I" "$CORRECTED"
-sed -i "s:\bIndias\b:India's:I" "$CORRECTED"
-
-#Spellcheck "Pakistan"
-
-sed -i "s:\bPakistan:Pakistan:I" "$CORRECTED"
-sed -i "s:\bPakistans:Pakistan's:I" "$CORRECTED"
-
-#Spellcheck "French"
-
-sed -i "s:French Revolution:French Revolution:I" "$CORRECTED"
-sed -i "s:French:French:I" "$CORRECTED"
-
-#Spellcheck "feudalism"
-#Feudalism is also the name of a game, so we'll preserve the case of the first letter
-
-sed -i "s:f[eE][uU][dD][aA][lL][sS][iI][mM]:feudalism:" "$CORRECTED"
-sed -i "s:F[eE][uU][dD][aA][lL][sS][iI][mM]:Feudalism:" "$CORRECTED"
-
 #Spellcheck "Spanish"
 
 sed -i "s:Spanish:Spanish:I" "$CORRECTED"
 
 #Spellcheck "English"
 
-
 sed -i "s:English:English:I" "$CORRECTED"
-
-#Spellcheck "American"
-
-sed -i "s:American Revolution:American Revolution:I" "$CORRECTED"
-sed -i "s:American:American:I" "$CORRECTED"
-
-#Spellcheck "Houston"
-
-sed -i "s:Houston:Houston:I" "$CORRECTED"
-sed -i "s:Houstons:Houston's:I" "$CORRECTED"
-
-#Spellcheck "Tucson"
-
-sed -i "s:Tucson:Tucson:I" "$CORRECTED"
-sed -i "s:Tucsons:Tucson's:I" "$CORRECTED"
 
 #Spellcheck "Miley Cyrus"
 
