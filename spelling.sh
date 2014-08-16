@@ -31,6 +31,7 @@ cp "$NEWPAGES" "$CORRECTED"
 . ./basic/basic.sh
 . ./Entertainment/Entertainment.sh
 . ./Government/Government.sh
+. ./Science/Science.sh
 
 #Spellcheck "iPod"
 
@@ -52,38 +53,6 @@ sed -i "s:English:English:I" "$CORRECTED"
 
 sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
 sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
-
-#Spellcheck "Venus"
-
-sed -i "s:\bVenus:Venus:I" "$CORRECTED"
-
-#Spellcheck "Earth"
-
-sed -i "s:\bEarth\b:Earth:I" "$CORRECTED"
-
-#Spellcheck "Mars"
-
-sed -i "s:\bMars\b:Mars:I" "$CORRECTED"
-
-#Spellcheck "Jupiter"
-
-sed -i "s:Jupiter:Jupiter:I" "$CORRECTED"
-
-#Spellcheck "Saturn"
-
-sed -i "s:Saturn:Saturn:I" "$CORRECTED"
-
-#Spellcheck "Uranus"
-
-sed -i "s:Uranus:Uranus:I" "$CORRECTED"
-
-#Spellcheck "Neptune"
-
-sed -i "s:Neptune:Neptune:I" "$CORRECTED"
-
-#Spellcheck "Pluto"
-
-sed -i "s:Pluto\b:Pluto:I" "$CORRECTED"
 
 #Spellcheck "Christian"
 
@@ -140,12 +109,10 @@ sed -i "s:\baqw\b:AdventureQuest Worlds:I" "$CORRECTED"
 sed -i "s:adventure quest worlds:AdventureQuest Worlds:I" "$CORRECTED"
 sed -i "s:AdventureQuest Worlds:AdventureQuest Worlds:I" "$CORRECTED"
 
-
 #Spellcheck "Region"
 
 sed -i "s:R[eE][iI][gG][oO][nN]:Region:" "$CORRECTED"
 sed -i "s:r[eE][iI][gG][oO][nN]:region:" "$CORRECTED"
-
 
 #Spellcheck "PHP"
 
@@ -207,6 +174,7 @@ then
     sed -i "s:|::g" "$PATCH" #removes pipe character
     movepages "$PATCH"
     md5sum "$CORRECTED" > MD5SUM
+    rm "$PATCH"
   fi
 fi
 
@@ -214,8 +182,5 @@ fi
 
 rm "$NEWPAGES"
 rm "$CORRECTED"
-rm "$PATCH"
 
 printf "%s" "$(date)" > lastrun
-
-
