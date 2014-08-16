@@ -36,11 +36,6 @@ cp "$NEWPAGES" "$CORRECTED"
 . ./Science/Science.sh
 . ./Technology/Technology.sh
 
-#Spellcheck "Miley Cyrus"
-
-sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
-sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
-
 #Final fixes and merge
 
 addbrackets "$NEWPAGES" "$CORRECTED"

@@ -5,7 +5,7 @@
 #Spellcheck "Cambodia"
 
 sed -i "s:Cambodia:Cambodia:I" "$CORRECTED"
-sed -i "s:Cambodias:Cambodia's" "$CORRECTED"
+sed -i "s:Cambodias:Cambodia's:I" "$CORRECTED"
 
 #Spellcheck "Angkor Wat"
 
