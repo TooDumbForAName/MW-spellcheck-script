@@ -2,6 +2,7 @@
 
 #Settings
 
+PID=$(echo $$)
 GBT=1
 PYWIKIPEDIADIR="../"
 BOTNAME="MYBOTNAME"
