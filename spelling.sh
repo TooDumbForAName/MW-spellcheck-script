@@ -42,7 +42,7 @@ if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
   if [ "$(md5sum "$NEWPAGES")" != "$NEWMDSUM" ]; #sums are different, so it's worth running
   then
-    sdiff -s "$NEWPAGES" "$CORRECTED" > "$PATCH"
+    sdiff -st "$NEWPAGES" "$CORRECTED" > "$PATCH"
     sed -i "s:|::g" "$PATCH" #removes pipe character
     movepages "$PATCH"
     md5sum "$CORRECTED" > MD5SUM

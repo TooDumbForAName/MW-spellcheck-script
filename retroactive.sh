@@ -42,9 +42,9 @@ addbrackets "$NEWPAGES" "$CORRECTED"
 
 if [ "$1" != "" ];
 then
-  sdiff -s "$NEWPAGES" "$CORRECTED" > "$PATCH"
+  sdiff -st "$NEWPAGES" "$CORRECTED" > "$PATCH"
 else
-  sdiff -sH "$NEWPAGES" "$CORRECTED" > "$PATCH" #Use large file mode if running on entire site
+  sdiff -sHt "$NEWPAGES" "$CORRECTED" > "$PATCH" #Use large file mode if running on entire site
 fi
 
 sed -i "s:|::g" "$PATCH" #removes pipe character
