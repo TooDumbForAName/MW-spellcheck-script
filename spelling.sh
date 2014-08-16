@@ -54,43 +54,6 @@ sed -i "s:English:English:I" "$CORRECTED"
 sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
 sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
 
-#Spellcheck "Christian"
-
-sed -i "s:\bChristian:Christian:I" "$CORRECTED"
-
-#Spellcheck "Jesus"
-
-sed -i "s:\bJesus:Jesus:I" "$CORRECTED"
-
-#Spellcheck "Jewish"
-
-sed -i "s:\bJewish:Jewish:I" "$CORRECTED"
-
-#Spellcheck "Hebrew"
-
-sed -i "s:\bHebrew:Hebrew:I" "$CORRECTED"
-
-#Spellcheck "Islam" 
-
-sed -i "s:\bIslam:Islam:I" "$CORRECTED"
-
-#Spellcheck "Muslim"
-
-sed -i "s:Muslim:Muslim:I" "$CORRECTED"
-
-#Spellcheck "Buddhist"
-
-sed -i "s:\bBuddhist:Buddhist:I" "$CORRECTED"
-sed -i "s:buddist:Buddhist:I" "$CORRECTED"
-
-#Spellcheck "Hinduism"
-
-sed -i "s:\bHindu:Hindu:I" "$CORRECTED"
-sed -i "s:Hinduism:Hinduism:I" "$CORRECTED"
-sed -i "s:Hinudism:Hinduism:I" "$CORRECTED"
-sed -i "s:Hidusim:Hinduism:I" "$CORRECTED"
-sed -i "s:Hinudsim:Hinduism:I" "$CORRECTED"
-
 #Spellcheck "Google"
 
 sed -i "s:Google:Google:I" "$CORRECTED"
@@ -168,7 +131,7 @@ NEWMDSUM=$(md5sum "$CORRECTED")
 
 if [ "$OLDMDSUM" != "$NEWMDSUM" ]; #Questions have changed
 then
-  if [ "$(md5sum "$NEWPAGES")" != "$(md5sum "$CORRECTED")" ]; #sums are different, so it's worth running
+  if [ "$(md5sum "$NEWPAGES")" != "$NEWMDSUM" ]; #sums are different, so it's worth running
   then
     sdiff -s "$NEWPAGES" "$CORRECTED" > "$PATCH"
     sed -i "s:|::g" "$PATCH" #removes pipe character
