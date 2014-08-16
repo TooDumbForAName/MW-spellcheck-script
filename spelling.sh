@@ -32,25 +32,14 @@ cp "$NEWPAGES" "$CORRECTED"
 . ./common/common.sh
 . ./Entertainment/Entertainment.sh
 . ./Government/Government.sh
+. ./Language/Language.sh
 . ./Science/Science.sh
 . ./Technology/Technology.sh
-
-#Spellcheck "Spanish"
-
-sed -i "s:Spanish:Spanish:I" "$CORRECTED"
-
-#Spellcheck "English"
-
-sed -i "s:English:English:I" "$CORRECTED"
 
 #Spellcheck "Miley Cyrus"
 
 sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
 sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
-
-#Spellcheck "verb"
-
-sed -i "s:\bvreb:verb:I" "$CORRECTED"
 
 #Spellcheck "Angkor Wat"
 
