@@ -5,3 +5,4 @@
 ENTERTAINMENTDIR="./Entertainment/"
 
 . "$ENTERTAINMENTDIR/Franchises/Franchises.sh"
+. "$ENTERTAINMENTDIR/Toys/Toys.sh"
