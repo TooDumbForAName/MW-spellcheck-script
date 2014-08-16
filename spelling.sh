@@ -33,14 +33,7 @@ cp "$NEWPAGES" "$CORRECTED"
 . ./Entertainment/Entertainment.sh
 . ./Government/Government.sh
 . ./Science/Science.sh
-
-#Spellcheck "iPod"
-
-sed -i "s:ipod:iPod:I" "$CORRECTED"
-
-#Spellcheck "iPhone"
-
-sed -i "s:iphone:iPhone:I" "$CORRECTED"
+. ./Technology/Technology.sh
 
 #Spellcheck "Spanish"
 
@@ -55,29 +48,13 @@ sed -i "s:English:English:I" "$CORRECTED"
 sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
 sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
 
-#Spellcheck "Google"
-
-sed -i "s:Google:Google:I" "$CORRECTED"
-
-#Spellcheck "computer"
-
-sed -i "s:cumputer:computer:I" "$CORRECTED"
-
 #Spellcheck "verb"
 
 sed -i "s:\bvreb:verb:I" "$CORRECTED"
 
-#Spellcheck "PHP"
-
-sed -i "s:\bPHP\b:PHP:I" "$CORRECTED"
-
 #Spellcheck "Angkor Wat"
 
 sed -i "s:Angkor What:Angkor Wat:I" "$CORRECTED"
-
-#Spellcheck "Wikianswers"
-
-sed -i "s:wikianswers:Wikianswers:I" "$CORRECTED"
 
 #Final fixes and merge
 
