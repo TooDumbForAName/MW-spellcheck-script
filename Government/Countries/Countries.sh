@@ -9,5 +9,6 @@ COUNTRIESDIR="$GOVERNMENTDIR/Countries"
 . "$COUNTRIESDIR/France/France.sh"
 . "$COUNTRIESDIR/India/India.sh"
 . "$COUNTRIESDIR/Pakistan/Pakistan.sh"
+. "$COUNTRIESDIR/Spain/Spain.sh"
 . "$COUNTRIESDIR/United_States/UnitedStates.sh"
 
