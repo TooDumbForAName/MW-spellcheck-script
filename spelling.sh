@@ -41,10 +41,6 @@ cp "$NEWPAGES" "$CORRECTED"
 sed -i "s:MileyCyrus:Miley Cyrus:I" "$CORRECTED"
 sed -i "s:Miley Cyrus:Miley Cyrus:I" "$CORRECTED"
 
-#Spellcheck "Angkor Wat"
-
-sed -i "s:Angkor What:Angkor Wat:I" "$CORRECTED"
-
 #Final fixes and merge
 
 addbrackets "$NEWPAGES" "$CORRECTED"
