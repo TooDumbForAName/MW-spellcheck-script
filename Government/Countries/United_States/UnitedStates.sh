@@ -57,6 +57,11 @@ sed -i "s:Texass:Texas's:I" "$CORRECTED"
 sed -i "s:Houston:Houston:I" "$CORRECTED"
 sed -i "s:Houstons:Houston's:I" "$CORRECTED"
 
+#Spellcheck "Utah"
+
+sed -i "s:Utah:Utah:I" "$CORRECTED"
+sed -i "s:Utahs:Utah's:I" "$CORRECTED"
+
 #Spellcheck "Wyoming"
 
 sed -i "s:Wyoming:Wyoming:I" "$CORRECTED"
