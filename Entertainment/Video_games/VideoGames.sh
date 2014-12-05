@@ -2,6 +2,8 @@
 
 ##Fixes related to video games
 
+printf "%s\n" "Starting Video games"
+
 #Spellcheck "The Sims 2"
 
 sed -i "s:sims 2:The Sims 2:I" "$CORRECTED"
@@ -39,5 +41,14 @@ sed -i "s:AdventureQuest Worlds:AdventureQuest Worlds:I" "$CORRECTED"
 
 #Spellcheck "Studyladder"
 
-sed -i "s:Stud(|d)yla(|d)der:Studyladder:I" "$CORRECTED"
-sed -i "s:Stud(|d)y la(|d)der:Studyladder:I" "$CORRECTED"
+sed -i "s:Studdyladder:Studyladder:I" "$CORRECTED"
+sed -i "s:Studdy ladder:Studyladder:I" "$CORRECTED"
+sed -i "s:Studyladder:Studyladder:I" "$CORRECTED"
+sed -i "s:Study ladder:Studyladder:I" "$CORRECTED"
+
+#Spellcheck "Alxemy"
+
+sed -i "s:Alxemy:Alxemy:I" "$CORRECTED"
+
+printf "%s\n" "Finishing Video games"
+
