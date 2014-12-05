@@ -36,3 +36,8 @@ sed -i "s:runescape:RuneScape:I" "$CORRECTED"
 sed -i "s:\baqw\b:AdventureQuest Worlds:I" "$CORRECTED"
 sed -i "s:adventure quest worlds:AdventureQuest Worlds:I" "$CORRECTED"
 sed -i "s:AdventureQuest Worlds:AdventureQuest Worlds:I" "$CORRECTED"
+
+#Spellcheck "Studyladder"
+
+sed -i "s:Stud(|d)yla(|d)der:Studyladder:I" "$CORRECTED"
+sed -i "s:Stud(|d)y la(|d)der:Studyladder:I" "$CORRECTED"
