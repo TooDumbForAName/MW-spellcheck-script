@@ -1,6 +1,6 @@
 #!/bin/bash
 
-###Fixes spellign of basic English words
+###Fixes spelling of basic English words
 
 #Spellcheck lowercase single "I"
 

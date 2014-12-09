@@ -4,6 +4,7 @@
 
 COUNTRIESDIR="$GOVERNMENTDIR/Countries"
 
+. "$COUNTRIESDIR/Australia/Australia.sh"
 . "$COUNTRIESDIR/Cambodia/Cambodia.sh"
 . "$COUNTRIESDIR/Canada/Canada.sh"
 . "$COUNTRIESDIR/Costa_Rica/CostaRica.sh"

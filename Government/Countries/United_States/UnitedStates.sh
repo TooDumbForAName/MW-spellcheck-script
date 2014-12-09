@@ -42,6 +42,10 @@ sed -i "s:Californias:California's:I" "$CORRECTED"
 sed -i "s:Colorado:Colorado:I" "$CORRECTED"
 sed -i "s:Colorados:Colorado's:I" "$CORRECTED"
 
+#Spellcheck "Mississippi"
+
+sed -i "s:Mississippi:I" "$CORRECTED"
+
 #Spellcheck "Montana"
 
 sed -i "s:montana:Montana:I" "$CORRECTED"
