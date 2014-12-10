@@ -133,7 +133,7 @@ sed -i "s:Abomasnow:Abomasnow:I" "$CORRECTED"
 
 #Spellcheck "Abra"
 
-sed -i "s: Abra: Abra:I" "$CORRECTED"
+sed -ir "s:\bAbra\b:Abra:I" "$CORRECTED"
 
 #Spellcheck "Absol"
 
