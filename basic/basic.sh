@@ -59,5 +59,5 @@ sed -i "s:Wii UTemp:Wii U :I" "$CORRECTED" #Put back
 
 #Spellcheck "Can't"
 
-sed -i "s:\bc[aA][nN][tT]:can't:" "$CORRECTED"
+sed -i "s:\bc[aA][nN][tT]\b:can't:" "$CORRECTED"
 
