@@ -137,9 +137,7 @@ sed -ir "s:\bAbra\b:Abra:I" "$CORRECTED"
 
 #Spellcheck "Absol"
 
-sed -i "s: Absol : Absol :I" "$CORRECTED"
-sed -i "s:Absol :Absol :I" "$CORRECTED"
-sed -i "s: Absol$: Absol$:I" "$CORRECTED"
+sed -ir "s:\bAbsol\b:Absol:I" "$CORRECTED"
 
 #Spellcheck "Accelgor"
 
