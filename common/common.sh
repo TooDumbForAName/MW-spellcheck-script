@@ -8,5 +8,5 @@ sed -i "s:happend:happened:I" "$CORRECTED"
 
 #Spellcheck "Region"
 
-sed -i "s:R[eE][iI][gG][oO][nN]:Region:" "$CORRECTED"
-sed -i "s:r[eE][iI][gG][oO][nN]:region:" "$CORRECTED"
+sed -ir "s:\bR[eE][iI][gG][oO][nN]:Region:" "$CORRECTED"
+sed -ir "s:\br[eE][iI][gG][oO][nN]:region:" "$CORRECTED"
